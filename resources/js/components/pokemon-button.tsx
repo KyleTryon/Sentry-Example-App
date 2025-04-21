@@ -47,10 +47,10 @@ function PokemonButton({
     const pokemon = PokemonProps[pokemonId];
     return (
         <button
-            className={`flex flex-col w-1/3 px-6 py-3 ${pokemon.background} text-white rounded hover:cursor-pointer`}
+            className={`flex flex-col w-1/3 px-6 py-3 ${pokemon.background} border-8 text-white rounded-2xl hover:cursor-pointer`}
             {...props}
         >
-            <img className="flex-1" src={pokemon.image} alt={pokemon.name} />
+            <img className="flex-1 p-8" src={pokemon.image} alt={pokemon.name} />
             <h2 className={`text-center py-3 font-black text-4xl ${pokemon.accent} rounded`}>{pokemon.name}</h2>
         </button>
     );
