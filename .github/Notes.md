@@ -1,4 +1,4 @@
-# Developer Experience Notes
+# Laravel Developer Experience Notes
 A place to document my experience with the Developer Experience Engineer interview exercise from the perspective of a first-time Sentry user and someone new to PHP.
 
  - I initialized the project according to the [Laravel documentation](https://laravel.com/docs/12.x) and began to explore the generated template code along-side the [Directory Structure](https://laravel.com/docs/12.x/structure) documentation.
@@ -18,3 +18,8 @@ A place to document my experience with the Developer Experience Engineer intervi
     - This was because I had decided to use `/battle` but had forgotten to update the route after updating the controller.
   - Next, now, the Id does not appear to be getting passed to the controller.
     - The data was wrapped in an a response object from Inertia. 
+- Now I want to implment the game logic on the server-side within the battle controller.
+  - A little bit of digging as I am not very familiar with PHP, but very straightforward from the standpoint of mentally converting from Typescript to PHP.
+- Next will be implementing Sentry.io
+
+# Sentry.io Developer Experience Notes
