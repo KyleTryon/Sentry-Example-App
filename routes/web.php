@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+Route::get('/', [GameController::class, 'index'])->name('index');
+Route::post('/play', [GameController::class, 'play'])->name('play');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
