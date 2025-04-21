@@ -13,4 +13,14 @@ class GameController extends Controller
     {
         return Inertia::render('index');
     }
+
+    public function battle(Request $request): Response
+    {
+        $pokemonId = (int) $request->input('pokeId');
+
+        return Inertia::render('battle', [
+            'pokemonId' => $pokemonId,
+        ]);
+    }
+
 }

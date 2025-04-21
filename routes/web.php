@@ -5,7 +5,7 @@ use App\Http\Controllers\GameController;
 use Inertia\Inertia;
 
 Route::get('/', [GameController::class, 'index'])->name('index');
-Route::post('/play', [GameController::class, 'play'])->name('play');
+Route::post('/battle', [GameController::class, 'battle'])->name('battle');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {

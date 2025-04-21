@@ -1,13 +1,13 @@
 import React from 'react';
-import { Head } from '@inertiajs/react';
+import { Head, router } from '@inertiajs/react';
 import { PokemonButton, PokemonProps, ValidPokemon } from '@/components/pokemon-button';
 
 export default function Index() {
 
-    const handleSubmit = (pokemon: ValidPokemon) => {
-        console.log('Selected Pokémon:', PokemonProps[pokemon].name);
-    };
-
+    // Function to handle the submission of the selected Pokémon, post to /battle
+    const handleSubmit = (pokemonId: ValidPokemon) => {
+        router.post('/battle', { pokeId: pokemonId });
+    }
     return (
         <>
             <Head title="Pokémon RPS" />
