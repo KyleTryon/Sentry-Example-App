@@ -7,3 +7,7 @@ A place to document my experience with the Developer Experience Engineer intervi
 - Got my index view to load with some simple buttons for selecting a starter Pokemon. No logic added at this point.
   - Installing Tailwind for better styling.
   - Going to investigate moving the buttons to a React component.
+- Migrating from a blade template to a React component. [documentation](https://laravel.com/docs/12.x/frontend#using-react-or-vue)
+  - Successfully migrated the blade template to a React component. Now componentizing the buttons.
+  - Migrating the buttons to a React component took a little longer than expected. I believe Vite used to allow importing SVGs by default but now requires a plugin. A few changes to the vite.config and a closer look at the tsconfig file and I was able to get the SVGs to load correctly.
+  - The buttons currently only output the name of the Pokemon to the browser console.
