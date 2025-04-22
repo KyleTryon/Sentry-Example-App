@@ -5,6 +5,9 @@ A Laravel example application - Select your Gen I starter Pokemon in a game of R
 
 ![PokeRPS](./.github/img/pokemon-screenshot.png)
 
+## Assignment Notes
+This application was built as part of an interview exercise. I attempted to log my experience, unfiltered, in the [Notes.md](.github/Notes.md) file.
+
 ## Local Development
 
 To run the development server locally, you will need to have the following prerequisites installed:
