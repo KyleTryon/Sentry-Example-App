@@ -3,6 +3,8 @@ A Laravel example application - Select your Gen I starter Pokemon in a game of R
 
 ---
 
+![PokeRPS](./.github/img/pokemon-screenshot.png)
+
 ## Local Development
 
 To run the development server locally, you will need to have the following prerequisites installed:
