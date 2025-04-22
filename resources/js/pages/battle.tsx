@@ -7,7 +7,7 @@ export default function battle({ pokemonId, trainerId, result }: { pokemonId: Va
         <>
             <Head title="Pokémon Battle" />
             <div className="flex flex-col bg-orange-100 text-center min-h-screen p-10">
-                <h1 className="text-5xl text-black font-extrabold mb-6">Battle Time!</h1>
+                <h1 className="text-5xl text-black font-extrabold mb-6">A Wild Trainer Appears!</h1>
                 <div className="flex gap-4 justify-center">
                     <PokemonButton
                         pokemonId={pokemonId}
@@ -19,7 +19,7 @@ export default function battle({ pokemonId, trainerId, result }: { pokemonId: Va
                         onClick={() => { }}
                     />
                 </div>
-                <h3 className="text-2xl text-black py-5">YOU {result.toUpperCase()}!</h3>
+                <h3 className="text-4xl text-black py-5">YOU {result.toUpperCase()}!</h3>
                 <div className="flex justify-center">
                 <button
                     className="text-black bg-white text-2xl font-bold py-2 px-4 border-8 rounded-2xl hover:cursor-pointer"
