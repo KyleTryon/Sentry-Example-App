@@ -6,6 +6,10 @@ use Inertia\Inertia;
 
 Route::get('/', [GameController::class, 'index'])->name('index');
 Route::post('/battle', [GameController::class, 'battle'])->name('battle');
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
