@@ -40,3 +40,15 @@ A place to document my experience with the Developer Experience Engineer intervi
     - Traces is covered in the next section of the documentation I have open.
     - SENTRY_TRACES_SAMPLE_RATE is already set to 1.0 in the .env file.
     - I played a few rounds of the game and confirmed that Sentry was capturing the performance traces.
+  - Session Replays
+    - This information was not under the Laravel section of the documentation, but that makes sense as the real target is React.
+    - Found the [documentation](https://docs.sentry.io/product/explore/session-replay/web/), and _hey!_ a Pokemon reference!
+    - I was not sure what `add the following to your Sentry initialization` was referring to. It was a little more clear on [https://sentry.io/for/react/](https://sentry.io/for/react/) `We recommend putting the Sentry initialization code into its own file and including that file as the first import in your application entry point` and at that point I recalled the `app.tsx` file.
+    - I added the Sentry initialization code to `sentry.ts` and imported it into the `app.tsx` file.
+    - I thought at this point I would see a session replay, so I played a few rounds of the game and waited a few minutes to see if the dashboard would populate.
+    - After enabling debugging in the Sentry init I saw `index.tsx:9 Sentry Logger [warn]: Discarded session because of missing or non-string release`
+      - After looking around I discovered that `release` should be set in the Sentry init.
+      - The `release` property is optional and not mentioned in the documentation, but it appears it may be necessary for session replays.
+    - After adding the `release` property, I was able to see the network requests to `https://x.ingest.us.sentry.io/api/)`
+  - I was also looking in the wrong location in the Sentry dashboard. I was looking under `Insights > Frontend`, but it looks like there are sessions from a while ago already under `Explore > Replays`. It is likely some of the above changes were not necessary.
+    - Replays are successfully recording!
